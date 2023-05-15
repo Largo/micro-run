@@ -34,6 +34,8 @@ function runitCommand(bp) -- bp BufPane
 		else
 			cmd = string.format("go run '%s'", filename)
 		end
+	elseif filetype == "ruby" then
+		cmd = string.format("ruby '%s'", filename)
 	elseif filetype == "python" then
 		cmd = string.format("python3 '%s'", filename)
 	elseif filetype == "html" then
